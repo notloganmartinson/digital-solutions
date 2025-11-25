@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Solutions: In-Home Repair & Consulting</title>
+    <!-- Load Orbitron (for Title) and Oswald (for Body/Headlines) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and base styles */
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #f8fafc; 
+            color: #1f2937;
+        }
+        .science-gothic {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* ISU Colors */
+        .isu-red-bg { background-color: #ce1126; } /* Official-ish Red */
+        .isu-black-text { color: #000000; }
+
+        /* Text Sizing */
+        .text-xl-large { font-size: 1.4rem; line-height: 1.6; }
+        .text-2xl-large { font-size: 2rem; line-height: 1.2; }
+
+        /* Animations */
+        @keyframes pulse-once {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); box-shadow: 0 10px 25px rgba(250, 204, 21, 0.6); }
+        }
+        .pulse-hover:hover {
+            animation: pulse-once 0.6s ease-in-out infinite;
+        }
+
+        /* Cool Backgrounds */
+        .hero-bg {
+            /* Tech background image */
+            background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header with Hero Image Background -->
+    <header class="hero-bg relative text-white shadow-2xl">
+        <!-- Dark Overlay for readability -->
+        <div class="absolute inset-0 bg-black/85"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto text-center py-20 px-6">
+            <!-- Main Title -->
+            <h1 class="text-6xl md:text-8xl font-black mb-2 tracking-tighter science-gothic text-yellow-400 drop-shadow-lg">
+                Digital Solutions
+            </h1>
+            
+            <h2 class="text-2xl md:text-3xl font-bold italic mt-4 mb-2 text-gray-400 tracking-wide">
+                Reliable Technology Consulting & In-Home Repair
+            </h2>
+            
+            <h3 class="text-2xl md:text-3xl font-extrabold text-gray-400 mb-10 tracking-widest uppercase border-b-2 border-gray-600 inline-block pb-2">
+                Good with Seniors!
+            </h3>
+            
+            <!-- Call to Action Button -->
+            <div class="inline-block">
+                <div class="bg-yellow-400 text-gray-900 p-6 md:p-8 rounded-2xl shadow-[0_0_30px_rgba(250,204,21,0.5)] hover:bg-yellow-300 transition duration-300 pulse-hover border-4 border-transparent hover:border-white cursor-pointer">
+                    <p class="text-xl md:text-2xl font-bold mb-2 science-gothic tracking-wide">
+                        SOLVE YOUR TECH PROBLEM TODAY:
+                    </p>
+                    <a href="tel:815-975-4362" class="text-4xl md:text-6xl font-black block leading-none">
+                        CALL OR TEXT: <br class="md:hidden"/>(815) 975-4362
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
+
+        <!-- Services Section -->
+        <section class="mb-16 glass-panel rounded-3xl shadow-2xl border-t-8 border-red-600 overflow-hidden">
+            <div class="p-8 md:p-12">
+                <h2 class="text-4xl md:text-5xl font-black mb-12 text-center text-gray-900 uppercase tracking-tight">
+                    Fast, Affordable Service for Your Home or Small Office
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Card 1 -->
+                    <div class="p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border border-gray-100">
+                        <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">SPEED & DIAGNOSIS</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">Computer slow? We eliminate bottlenecks, update software, and perform hardware checks.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border border-gray-100">
+                         <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">NETWORK & SETUP</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">Trouble with Wi-Fi, printers, or new device setup? We ensure seamless connectivity in your home.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border border-gray-100">
+                         <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">SECURITY & TRAINING</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">Virus, malware, and scam removal. We restore safety and provide basic cybersecurity training.</p>
+                    </div>
+                </div>
+
+                <!-- Pricing Box -->
+                <div class="mt-16 max-w-3xl mx-auto bg-green-50 border-2 border-green-500 rounded-2xl shadow-xl overflow-hidden relative">
+                    <div class="bg-green-500 text-white text-center py-2 font-bold tracking-wider">LIMITED TIME OFFER</div>
+                    <div class="p-8 text-center">
+                        <p class="text-3xl font-bold text-green-800 mb-2">INTRODUCTORY FLAT RATE:</p>
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-4 mb-6">
+                            <span class="text-3xl text-gray-400 line-through decoration-2">Reg. $79/hour</span>
+                            <span class="text-6xl md:text-7xl font-black text-green-700 tracking-tighter">$79 FLAT!</span>
+                        </div>
+                        <p class="text-xl font-medium text-gray-600 mb-6 uppercase tracking-wide">All-In Service • No Hidden Fees</p>
+                        <div class="bg-white p-6 rounded-xl border border-green-200 inline-block shadow-sm">
+                             <p class="text-2xl md:text-3xl font-bold text-green-600 mb-3">
+                                If We Can't Fix It, You Only Pay $25.
+                            </p>
+                            <p class="text-lg md:text-xl text-gray-600 font-normal leading-relaxed max-w-xl mx-auto">
+                                Local shops will hold your computer for days just to charge you $50 or more to say they can't fix it. <span class="font-bold text-green-700">We will diagnose the problem on the spot.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ISU Redbirds / Senior Section -->
+        <section class="mb-16 rounded-3xl shadow-2xl overflow-hidden">
+            <div class="grid md:grid-cols-2">
+                
+                <!-- Left: Cooler Image (Same as Header) -->
+                <div class="relative h-64 md:h-auto">
+                     <img 
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                        alt="Modern technology background" 
+                        class="absolute inset-0 w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent md:bg-gradient-to-t"></div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="isu-red-bg text-white p-8 md:p-12 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-black mb-8 text-center md:text-left text-black science-gothic bg-white/90 p-3 rounded-lg inline-block shadow-lg transform -rotate-1">
+                        Specialized Senior Support
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <!-- ISU Credibility Block -->
+                        <div class="p-6 bg-black rounded-xl shadow-xl border-l-8 border-yellow-400">
+                            <p class="text-2xl md:text-3xl font-bold text-red-400 text-center leading-tight mb-2">
+                                Senior Computer Science Major at Illinois State University
+                            </p>
+                            <p class="text-xl text-gray-300 text-center font-light">
+                                We bring university-level diagnostic expertise directly to your home in Normal and Bloomington.
+                            </p>
+                        </div>
+
+                        <!-- List -->
+                        <div class="space-y-4">
+                            <h3 class="text-xl-large font-bold text-gray-200">WHY WE'RE BEST FOR SENIORS:</h3>
+                            <ul class="space-y-2 list-disc list-inside text-xl-large text-gray-100">
+                                <li class="font-semibold">Patient, Rote Instruction (we go at your pace).</li>
+                                <li class="font-semibold">Specialists in Scam & Phishing Prevention.</li>
+                                <li class="font-semibold">Setup for Video Calls (Zoom, FaceTime) to stay connected.</li>
+                                <li class="font-semibold">In-Home Service (No disconnecting and driving the PC).</li>
+                            </ul>
+                        </div>
+
+                        <!-- NEW: Personalized Tech Lessons Block -->
+                        <div class="mt-6 bg-black/30 p-6 rounded-xl border-2 border-yellow-400/50 shadow-lg backdrop-blur-sm">
+                            <h4 class="text-2xl font-bold text-yellow-300 mb-2 science-gothic tracking-wide">
+                                Personalized Tech Lessons
+                            </h4>
+                            <p class="text-xl text-white leading-relaxed font-light">
+                                We don't just fix it; we teach you how to use it! Whether you want to master your new smartphone, organize photos, or learn to video chat with family, we offer patient, one-on-one lessons right in your home.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-2xl md:text-3xl font-light mb-6 science-gothic text-gray-400">
+                Ready to simplify your technology?
+            </p>
+            
+            <div class="inline-block border-4 border-yellow-400 p-1 rounded-2xl mb-8">
+                <div class="bg-yellow-400 text-black py-4 px-10 rounded-xl">
+                     <p class="text-xl font-bold mb-1">CALL OR TEXT NOW:</p>
+                     <a href="tel:815-975-4362" class="text-4xl md:text-6xl font-black hover:opacity-80 transition">
+                        (815) 975-4362
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-2 text-gray-500 text-lg">
+                <p>
+                    Email: <a href="mailto:logantmartinson@gmail.com" class="text-white hover:text-yellow-400 underline decoration-yellow-400 underline-offset-4 transition">logantmartinson@gmail.com</a>
+                </p>
+                <p class="text-base pt-4 border-t border-gray-800 mt-8 w-1/2 mx-auto">
+                    Digital Solutions is proudly owned and operated by a local ISU student.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
